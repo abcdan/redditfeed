@@ -1,5 +1,6 @@
 # redditfeed
 A Reddit feed for those who want to comment on the latest posts on Reddit.
+For now I have the project running on Glitch but I'm planning on moving it to Heroku (since there is no 4k request/hour limit). Check it out over [here](https://redditfeed.glitch.me/)
 
 # Setup
 1. Clone the repository.
