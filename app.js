@@ -28,6 +28,7 @@ const streamOpts = {
 };
 
 const submissionStream = client.SubmissionStream(streamOpts);
+
 submissionStream.on("submission", function (post) {
     var content = {
         time: moment().calendar(),

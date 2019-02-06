@@ -49,10 +49,12 @@
     <script src="https://code.jquery.com/jquery-1.11.1.js"></script>
     <script>
         var socket = io();
-
+        var count = 0;
         socket.on('postdata', function (data) {
             $('#posts').prepend($('<li>').html("[" + data.time + "] " + data.username + " on <b>" + data.subreddit +
                 "</b> | <a href=\"" + data.link + "\" target=\"_blank\">link</a><hr>"));
+                count += 1;
+                $("#count").text(count);
         });
     </script>
 </head>
@@ -64,7 +66,7 @@
         </b>
     </h1>
     <h6>
-        <center>Created by <a href="https://lngzl.nl">LNGZL.</a> &middot; <a href="https://github.com/abcdan/redditfeed">GITHUB.</a></center>
+        <center>Created by <a href="https://lngzl.nl">LNGZL.</a> &middot; <a href="https://github.com/abcdan/redditfeed">GITHUB.</a> &middot; Posts: <b id="count">0</b></center>
     </h6>
     <hr>
     <h5>
